@@ -8,9 +8,9 @@ int main(void)
 {
 	int n;
 
-	n = 48;
+	n = 0;
 
-	while (n <= 57)
+	while (n < 10)
 	{
 		printf("%d", n);
 		n++;
