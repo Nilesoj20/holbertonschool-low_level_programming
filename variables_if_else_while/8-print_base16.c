@@ -9,18 +9,16 @@ int main(void)
 	int n;
 	int x;
 
-	n = 0;
-	x = 'a';
-
-	for (n = 0; n <= 9; n++)
+	for (n = 48; n <= 57; n++)
 	{
 		putchar(n);
 	}
-	for (x = 'a'; x <= 'f'; n++)
+	for (x = 97; x <= 102; x++)
 	{
 		putchar(x);
 	}
 	putchar('\n');
+
 	return (0);
 }
 
