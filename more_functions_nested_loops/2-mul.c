@@ -3,13 +3,12 @@
 * mul - Entry point
 * @a: First operand
 * @b: Second operand
-* @mul: First member
 * Return: Always 0 (Success)
 */
 int mul(int a, int b)
 {
-	int mul;
+	int multiplica;
 
-	mul = a * b;
-	return (mul);
+	multiplica = a * b;
+	return (multiplica);
 }
