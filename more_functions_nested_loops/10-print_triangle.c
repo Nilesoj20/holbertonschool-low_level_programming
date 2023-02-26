@@ -13,24 +13,30 @@ void print_triangle(int size)
 	m = 0;
 	sizep = size - 1;
 	x = 1;
-
-	while (l < size)
+	if (size < 0 || size == 0)
 	{
-		while (p < sizep)
-		{
-			_putchar(' ');
-			p++;
-		}
-		sizep--;
-		p = 0;
-		while (m < x)
-		{
-			_putchar(35);
-			m++;
-		}
-		m = 0;
-		x++;
-		l++;
 		_putchar('\n');
+	}
+	else
+	{
+		while (l < size)
+		{
+			while (p < sizep)
+			{
+				_putchar(' ');
+				p++;
+			}
+			sizep--;
+			p = 0;
+			while (m < x)
+			{
+				_putchar(35);
+				m++;
+			}
+			m = 0;
+			x++;
+			l++;
+			_putchar('\n');
+		}
 	}
 }
