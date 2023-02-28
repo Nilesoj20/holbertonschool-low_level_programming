@@ -2,13 +2,13 @@
 /**
 * swap_int - Entry point
 * @a: First member
-* @b: 
+* @b: segunda menber
 * Return: Always 0 (Success)
 */
 void swap_int(int *a, int *b)
 {
 	int back;
-	
+
 	back = *a;
 	*a = *b;
 	*b = back;
