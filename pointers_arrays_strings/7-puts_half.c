@@ -14,7 +14,7 @@ void puts_half(char *str)
 		len++;
 		str++;
 	}
-	medio = (len - 1) / 2;
+	medio = (len) / 2;
 	for (i = 0; i < medio; i++)
 	{
 		str--;
