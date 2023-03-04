@@ -32,7 +32,7 @@ char *cap_string(char *str)
 					*ptemp -= 32;
 					alerta = 0;
 				}
-				else 
+				else
 				{
 					alerta = 0;
 				}
