@@ -10,10 +10,11 @@ char *cap_string(char *str)
 	int alerta;
 
 	ptemp = str;
-	alerta = 0;
+	alerta = 1;
 
 	while (*ptemp != '\0')
 	{
+
 		if (*ptemp == ' ' || *ptemp == '\t' || *ptemp == '\n' ||
 				*ptemp == ',' || *ptemp == 59 || *ptemp == 46 ||
 				*ptemp == 33 || *ptemp == 63 || *ptemp == 34 ||
@@ -26,8 +27,15 @@ char *cap_string(char *str)
 		{
 			if (alerta == 1)
 			{
-				*ptemp = *ptemp - 32;
-				alerta = 0;
+				if (*ptemp >= 97 && *ptemp <= 122)
+				{
+					*ptemp -= 32;
+					alerta = 0;
+				}
+				else 
+				{
+					alerta = 0;
+				}
 			}
 		}
 		ptemp++;
