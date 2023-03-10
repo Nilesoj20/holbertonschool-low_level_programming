@@ -5,7 +5,7 @@
 * @argv: array
 * Return: Always 0.
 */
-int main(int argc, char *argv[]__attribute ((unused)))
+int main(int argc, char *argv[]__attribute((unused)))
 {
 	if (argc == 0)
 	{
