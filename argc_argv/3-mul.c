@@ -6,7 +6,7 @@
 * @argv: array
 * Return: Always 0.
 */
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
 	int i;
 	int x = 1;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 	}
-	else 
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -23,5 +23,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", x);
 	}
-	return(0);
+	return (0);
 }
