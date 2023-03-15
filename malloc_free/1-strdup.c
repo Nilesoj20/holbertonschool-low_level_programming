@@ -23,18 +23,22 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	size_t i;
-	size_t len = _strlen(str) + 1;
-	char *ptem = malloc(len * sizeof(char));
+	size_t len;
+	char *ptem;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
+	len = _strlen(str) + 1;
+	ptem = malloc(len * sizeof(char));
+
 	if (ptem == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < len; i++)
 	{
 		ptem[i] = str[i];
