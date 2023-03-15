@@ -26,7 +26,12 @@ char *_strdup(char *str)
 	size_t len = _strlen(str) + 1;
 	char *ptem = malloc(len * sizeof(char));
 
-	if (str == NULL || ptem == NULL)
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	if (ptem == NULL)
 	{
 		return (NULL);
 	}
