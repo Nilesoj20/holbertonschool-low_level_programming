@@ -25,7 +25,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	size_t i, x;
-	size_t len1, len2;
+	size_t len1, len2, lentotal;
 	char *ptem;
 
 	if (s1 == NULL)
@@ -38,7 +38,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	ptem = malloc((len1 + n + 1) * sizeof(char));
+	if (n >= len2)
+	{
+		n = len2;
+	}
+	lentotal = len1 + n + 1;
+	ptem = malloc(lentotal * sizeof(char));
 	if (ptem == NULL)
 	{
 		return (NULL);
@@ -49,18 +54,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (x = 0; x < n; x++)
 	{
-		if (n >= len2)
-		{
-			while (s2[x] != '\0')
-			{
-				ptem[i] = s2[x];
-				i++;
-				x++;
-			}
-			break;
-		}
 		ptem[i] = s2[x];
 		i++;
 	}
+	ptem[lentotal - 1] = '\0';
 	return (ptem);
 }
