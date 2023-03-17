@@ -9,19 +9,23 @@
 int *array_range(int min, int max)
 {
 	int *ptem;
+	int i;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	ptem = malloc((max - min + 1) * sizeof(int));
-	if (ptem != NULL)
+	ptem = malloc(sizeof(int) * (max - min) + 1);
+	if (ptem == NULL)
 	{
-		while (min <= max)
-		{
-			ptem[min] = min;
-			min++;
-		}
+		return (NULL);
+	}
+	i = 0;
+	while (min <= max)
+	{
+		ptem[i] = min;
+		min++;
+		i++;
 	}
 	return (ptem);
 }
