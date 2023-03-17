@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 	i = 0;
 	while (min <= max)
 	{
-		ptem[i] = min;
+		*(ptem + i) = min;
 		min++;
 		i++;
 	}
