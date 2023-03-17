@@ -15,7 +15,7 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	ptem = malloc(sizeof(int) * (max - min) + 1);
+	ptem = malloc(sizeof(int) * ((max - min) + 1));
 	if (ptem == NULL)
 	{
 		return (NULL);
