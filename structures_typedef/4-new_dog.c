@@ -64,10 +64,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	len2 = _strlen(owner);
 	ptr->owner = malloc(sizeof(char) * len2 + 1);
-	if (ptr->name == NULL)
+	if (ptr->owner == NULL)
 	{
-		free(ptr);
 		free(ptr->name);
+		free(ptr);
 		return (NULL);
 	}
 	_copiar(ptr->owner, owner);
