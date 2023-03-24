@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 /**
  * int_index - check the code
- * @array: array 
+ * @array: array
  * @size: tamaño del array
  * @cmp: puntero a funcion
  * Return: indice
