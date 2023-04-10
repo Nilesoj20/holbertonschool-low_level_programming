@@ -1,5 +1,23 @@
 #include "lists.h"
 /**
+ * size - cantidad de nodos
+ * @head: puntero a head
+ * Return: total de nodos
+ */
+size_t size(const dlistint_t *head)
+{
+	const dlistint_t *tmp;
+	size_t len;
+
+	tmp = head;
+	for (len = 0; tmp != NULL;)
+	{
+		len++;
+		tmp = tm
+	}
+	return (len);
+}
+/**
  * insert_dnodeint_at_index - imprime elementos
  * @h: puntero a head
  * @idx: indice para agregar nuevo nodo
@@ -18,12 +36,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint(h, n));
 	}
 	pos = *h;
-	for (i = 0; i < idx && pos != NULL; i++)
+	if (idx > size(*h))
+		return (NULL);
+	for (i = 0; i < idx && pos->next != NULL; i++)
 	{
 		pos = pos->next;
 	}
-	if (pos == NULL)
-		return (NULL);
 	if (pos->next == NULL)
 		return (add_dnodeint_end(h, n));
 	tmp = malloc(sizeof(dlistint_t));
