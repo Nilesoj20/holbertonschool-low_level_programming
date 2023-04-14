@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * funciones - check the code
- * @variable:
- * Return: Always 0.
+ * read_textfile - abrir un archivo
+ * @filename: archivo
+ * @letters: cantidad de caracter
+ * Return: cantidad de letras
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -20,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 	letraActual = read(fd, buffer, letters);
-	if (letraActual == - 1)
+	if (letraActual == -1)
 		return (0);
 	retWrite = write(STDOUT_FILENO, buffer, letraActual);
 	if (retWrite < 0)
