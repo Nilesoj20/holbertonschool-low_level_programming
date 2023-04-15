@@ -18,13 +18,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] != NULL)
 	{
 		tmp = ht->array[index];
-		while (strcmp(tmp->key, key) != 0)
+		while (tmp)
 		{
+			if (strcmp(tmp->key, key) == 0)
+			{
+				free(ht->array[index]->value);
+				ht->array[index]->value = strdup(value);
+				return (1);
+			}
 			tmp = tmp->next;
 		}
-			free(ht->array[index]->value);
-			ht->array[index]->value = strdup(value);
-			return (1);
+		nodo = malloc(sizeof(hash_node_t));
+		if (!nodo)
+			return (0);
+		nodo->key = strdup(key);
+		nodo->value = strdup(value);
+		tmp = ht->array[index];
+		nodo->next = tmp;
+		ht->array[index] = nodo;
 	}
 	if (ht->array[index] == NULL)
 	{
